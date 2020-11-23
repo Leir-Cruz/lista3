@@ -1,0 +1,13 @@
+<%@books.each do |f| %>
+  <p>Nome do livro: <%= f.name%></p>
+  <p>Autor: <%= f.author.name %></p>
+  <p><%= link_to 'Deseja saber mais? Clique aqui!', book_path(f) %></p>
+  <p><%= link_to'Deseja Modificar algo sobre esse livro? Clique aqui!', edit_book_path(f) %></p>
+  <%= button_to 'Clique aqui para Apagar dados desse livro', book_path(f), method: :delete, data: {confirm: 'Tem certeza que deseja apagar? Talvez não seja possível recuperá-los...'}%>
+  <br>
+
+<% end %>
+
+<p><%= flash.alert %></p>
+
+<p><%= link_to 'Deseja adicionar um livro para a galeria? Clique aqui!', new_book_path %></p>

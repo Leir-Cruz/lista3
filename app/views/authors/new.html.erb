@@ -1,0 +1,9 @@
+<h3>Insira abaixo os dados do autor</h3>
+
+<%=form_for @author do |criacao| %>
+  <p>Nome: <%= criacao.text_field :name %></p>
+  <p>Ano de Nascimento<%= criacao.text_field :year_of_birth %></p>
+  <p>Nacionalidade <%= criacao.text_field :nationality %></p>
+
+  <%= criacao.submit%>
+<% end %>

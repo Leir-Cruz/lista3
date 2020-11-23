@@ -1,0 +1,9 @@
+<h3>Edite as informações desejadas abaixo: </h3>
+
+<%=form_for @author do |editado| %>
+  <p>Nome: <%= editado.text_field :name %></p>
+  <p>Ano de Nascimento<%= editado.text_field :year_of_birth %></p>
+  <p>Nacionalidade <%= editado.text_field :nationality %></p>
+
+  <%= editado.submit%>
+<%end %>

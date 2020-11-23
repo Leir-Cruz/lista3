@@ -1,0 +1,14 @@
+<% @authors.each do |autor| %>
+
+  <p><%= autor.name %></p>
+  <p><%= autor.year_of_birth %></p>
+  <p><%= autor.nationality %></p>
+  <p><%=link_to 'Conheça mais sobre esse autor aqui!', author_path(autor) %></p>
+  <p> <%= link_to 'Clique aqui para editar informações do autor', edit_author_path(autor)%></p>
+  <%= button_to 'Clique aqui para Apagar dados desse autor', author_path(autor), method: :delete, data: {confirm: 'Tem certeza que deseja apagar? Talvez não seja possível recuperá-los...'}%>
+  <br>
+<% end %>
+
+<p><%= flash.alert %></p>
+
+<p><%= link_to 'Deseja adicionar um autor ao site? Clique aqui!', new_author_path%></p>

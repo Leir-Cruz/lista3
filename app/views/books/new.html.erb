@@ -1,0 +1,8 @@
+<h3>Adicione um livro a galeria</h3>
+
+<%= form_for @book do |x| %>
+  <p>Nome do livro: <%=x.text_field :name %></p>
+  <p>Ano de publicação: <%=x.text_field :year_of_publishing %></p>
+  <p>Id do Autor: <%= x.text_field :author_id%></p>
+  <%= x.submit %>
+<%end %>
